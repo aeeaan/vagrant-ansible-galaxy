@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "centos-7.1"
+  config.vm.box = "correcthorse/Centos-7.1"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -68,4 +68,14 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+
+  config.vm.provision "ansible" do |galaxy|
+    galaxy.playbook = "provisioning/galaxy.yml"
+  end
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "provisioning/playbook.yml"
+    ansible.sudo = true
+  end
+
 end

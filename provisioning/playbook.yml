@@ -1,0 +1,7 @@
+---
+- hosts: all
+  roles:
+  - { role: common }
+  - { role: mysql }
+  - { role: httpd }
+  - { role: php }

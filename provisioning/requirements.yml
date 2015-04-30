@@ -1,0 +1,15 @@
+- src: https://github.com/correcthorse/common
+  version: master
+  path: roles/
+
+- src: https://github.com/correcthorse/mysql
+  version: master
+  path: roles/
+
+- src: https://github.com/correcthorse/httpd
+  version: master
+  path: roles/
+
+- src: https://github.com/correcthorse/php
+  version: master
+  path: roles/
