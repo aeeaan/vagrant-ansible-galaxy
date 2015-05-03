@@ -6,6 +6,18 @@
   version: master
   path: roles/
 
+- src: https://github.com/correcthorse/redis
+  version: master
+  path: roles/
+
+- src: https://github.com/correcthorse/varnish
+  version: master
+  path: roles/
+
+- src: https://github.com/correcthorse/pound
+  version: master
+  path: roles/
+
 - src: https://github.com/correcthorse/httpd
   version: master
   path: roles/

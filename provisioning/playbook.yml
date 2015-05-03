@@ -3,5 +3,8 @@
   roles:
   - { role: common }
   - { role: mysql }
+  - { role: redis }
+  - { role: varnish }
+  - { role: pound }
   - { role: httpd }
   - { role: php }
