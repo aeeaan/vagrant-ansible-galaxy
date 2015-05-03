@@ -1,0 +1,15 @@
+mysql_install_client: true
+mysql_install_server: true
+
+mysql_root_password: vagrant
+
+httpd_mod_ssl: false
+httpd_http_listeners:
+  - 127.0.0.1:80
+
+varnish_listen_address: "{{ ansible_default_ipv4.address }}"
+varnish_listen_port: 80
+
+pound_backends:
+  - address: "{{ varnish_listen_address }}"
+    port: "{{ varnish_listen_port }}"
